@@ -1,1 +1,4 @@
 json>= 0.0.1
+
+pyttsx3
+kivy

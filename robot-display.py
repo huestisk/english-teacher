@@ -1,1 +1,0 @@
-# class that creates a simple display to show the "emotion" of the robot
