@@ -1,0 +1,11 @@
+<ContainerBox>:
+    padding: 25
+    text_field: keyboard_input
+    orientation: 'vertical'
+    TextInput:
+        id: keyboard_input
+        hint_text: 'Enter Text Here'
+        width: 80
+    Button:
+        text: "Perform Speech Synthesis"
+        on_press: root.speech_synthesis(*args)
