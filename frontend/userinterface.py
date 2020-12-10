@@ -4,7 +4,7 @@ from kivy.config import Config
 from kivy.core.window import Window
 from kivy.uix.floatlayout import FloatLayout
 
-from frontend.voice_synthesis import speechGen
+from frontend.text2speech import Text2Speech
 
 Config.set('graphics', 'resizable', True) 
 
@@ -13,7 +13,7 @@ class ContainerBox(FloatLayout):
     def __init__(self, **kwargs):
         super(ContainerBox, self).__init__(**kwargs)
         Window.bind(on_key_down=self._on_keyboard_down)
-        self.speaker = speechGen()
+        self.speaker = Text2Speech()
 
     def _on_keyboard_down(self, instance, keyboard, keycode, text, modifiers):
         if self.text_field.focus and keycode == 40:  # 40 - Enter key pressed
@@ -21,9 +21,9 @@ class ContainerBox(FloatLayout):
 
     def keyboard_input(self):
         # TODO: 
-        #   pass text to backend
-        #   remove speech generation
-        #   improve speech bubble
+        #   - pass text to backend
+        #   - remove speech generation
+        #   - improve speech bubble
         text = self.text_field.text
         if text:
             self.speaker.say(text)

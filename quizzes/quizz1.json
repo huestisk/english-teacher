@@ -1,0 +1,74 @@
+{
+"questions": [
+{
+"question": "Good morning John. How are you?",
+"answers": [
+"I'm fine, thank you.",
+"I'm going by train.",
+"My name's John.",
+"I will be there"
+],
+"correctIndex": 1
+},
+{
+"question": "How many resorts do you work with?",
+"answers": [
+"Unfortunately, we don't have the ressources now.",
+"We work with five different sky resorts.",
+"We have twenty people on staff at the moment.",
+"This is our last resort."
+],
+"correctIndex": 2
+},
+{
+"question": "Do we know what happened to Nancy yesterday?",
+"answers": [
+"She wrote down a list of instructions.",
+"They say she retired last week.",
+"She said she felt a pain in her chest, then passed out.",
+"I will see her tomorrow."
+],
+"correctIndex": 3
+},
+{
+"question": "How do you cope with hiring so much new staff?",
+"answers": [
+"We don't do it ourselves, we outsource it to an agency.",
+"We only recuited two people last year.",
+"Our recruitement officer retired last year.",
+"I was recruited by this company."
+],
+"correctIndex": 1
+},
+{
+"question": "Why don't you get a new car?",
+"answers": [
+"It's a Toyota.",
+"We hired it at the airport.",
+"We can't afford to.",
+"It is my niece's car."
+],
+"correctIndex": 3
+},
+{
+"question": "Did you have to fire anyone recently?",
+"answers": [
+"There was a big fire at the warehouse yesterday.",
+"We hired ten new people in the past few months.",
+"We laid off several factory workers only last week.",
+"My uncle is a fireman."
+],
+"correctIndex": 3
+},
+{
+"question": "How many students actually pay for their own tuition?",
+"answers": [
+"The tuition fee is over fifty thousands dollars.",
+"Not many, most of them have a corporate scholarship.",
+"There is a high failure rate, only eighty-five percent graduated last year.",
+"Students are really hard working."
+],
+"correctIndex": 2
+}
+]
+}

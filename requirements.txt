@@ -1,5 +1,16 @@
+numpy
+pandas
+matplotlib
+
 json>= 0.0.1
 
-pyttsx3
+# For the application
 kivy
+
+# For speech generation
+pyttsx3
 libespeak1
+
+# For speech recognition
+SpeechRecognition
+pyaudio
