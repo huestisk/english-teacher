@@ -4,8 +4,9 @@ import os
 from pathlib import Path
 import speech_recognition as sr
 import yaml
+import platform
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 class SpeechRecognizer:
@@ -40,7 +41,15 @@ class SpeechRecognizer:
         # from the microphone
         with self.microphone as source:
             self.recognizer.adjust_for_ambient_noise(source)
-            audio = self.recognizer.listen(source)
+            try:
+                audio = self.recognizer.listen(source, timeout=5, phrase_time_limit=7)  # so that it is not endless
+            except sr.WaitTimeoutError:
+                response = {
+                    "success": False,
+                    "error": 'WaitTimeoutError',
+                    "transcription": None
+                }
+                return response
 
         # set up the response object
         response = {
@@ -67,12 +76,24 @@ class SpeechRecognizer:
     @classmethod
     def from_config(cls):
         r = sr.Recognizer()
-        mic = sr.Microphone()
+        r.energy_threshold = 500
 
         with open(os.path.join(BASE_DIR, 'config.yaml')) as f:
             data = yaml.load(f, Loader=yaml.FullLoader)
 
-        mic = sr.Microphone(device_index=data['Speech2Text']['default_mic_number'])
+        mic_index = data['Speech2Text']['default_mic_number']
+
+        if platform.system() == 'Linux':
+            mic_index = None
+
+        try:
+            mic = sr.Microphone(device_index=mic_index)
+
+        # if there is no specified or wrongly specified mic index in config.yaml, we choose default
+        # we also choose it for linux
+        except AssertionError:
+            mic = sr.Microphone(device_index=sr.Microphone.list_microphone_names().index('default'))
+
         return cls(recognizer=r, microphone=mic)
 
 

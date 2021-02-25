@@ -1,9 +1,28 @@
+<SpeechBubble>:
+
+    sb: speech_bubble
+    size_hint: (0.8, 0.45)
+    pos_hint: {'center_x':0.5, 'y':0.5}
+    background_color: (0, 0, 1, .2)
+
+    BubbleButton:
+        id: speech_bubble
+        text: ""
+        text_size: 0.8*self.width, None
+        halign: 'center'
+        color:  0, 0, 0, 1
+        font_size: '20sp'
+
 <ContainerBox>:
 
     text_field: keyboard_input
     text_button: text_button
     voice_button: voice_recognition
-    speech_bubble: speech_bubble
+    next_question_button: next_question
+    prev_question_button: prev_question
+    label: label
+    score_button: score_button
+
     robot: robot
 
     canvas.before:
@@ -18,25 +37,11 @@
         source: 'frontend/images/robot.png'
         pos_hint: {'x':0, 'y':-0.15}
 
-    Image:
-        id: speech_bubble
-        source: 'frontend/images/speech_bubble.png'
-        size_hint: (0.5, 0.5)
-        pos_hint: {'x':0.45, 'y':0.45}
-
-    Label:
-        id: speech_bubble
-        text: ""  # TODO: wrap text after size
-        color:  0, 0, 0, 1
-        font_size: '20sp'
-        halign: 'left'
-        size_hint: (None, None)
-        pos_hint: {'x':0.5, 'y':0.7}
-
     TextInput:
         id: keyboard_input
         focus: False
         hint_text: 'Enter Text Here'
+        multiline: False
         font_size: '20sp'
         pos_hint: {'x':.3, 'y':.05}
         size_hint: (0.4, 0.1)
@@ -48,7 +53,7 @@
         size_hint: (0.1, 0.1)
         text: "Enter"
         font_size: '20sp'
-        on_press: root.speak()
+        on_press: root.keyboard_input()
 
     Button:
         id: voice_recognition
@@ -56,4 +61,36 @@
         size_hint: (0.1, 0.1)
         border: (0,0,0,0)
         background_normal: 'frontend/images/mic.jpg'
-        on_press: root.speech_recognition(*args)
+        on_press: root.voice_input(*args)
+
+    Button:
+        id: next_question
+        pos_hint: {'x':.8, 'y':.05}
+        size_hint: (0.1, 0.1)
+        text: "Next"
+        font_size: '20sp'
+        on_press: root.next_question(True)
+
+    Button:
+        id: prev_question
+        pos_hint: {'x':.1, 'y':.05}
+        size_hint: (0.1, 0.1)
+        text: "Prev"
+        font_size: '20sp'
+        on_press: root.prev_question(True)
+
+    Label:
+        id: label
+        text: "Question"
+        color: [ 0/255, 0/255, 0/255, 1]
+        font_size: 20
+        pos_hint: {'x':.8, 'y':.4}
+        size_hint : (.1, .1)
+
+    Button:
+        id: score_button
+        pos_hint: {'x':.8, 'y':.2}
+        size_hint: (0.1, 0.1)
+        text: "Results"
+        font_size: '20sp'
+        on_press: root.show_score()

@@ -1,0 +1,31 @@
+{
+    "intro_mixed": [
+        "Here's the first question:"
+    ],
+    "intro_keyboard": [
+        "Here's the first question:"
+    ],
+    "intro_voice": [
+        "Here's the first question:"
+    ],
+    "correct_response": [
+        "You chose the first option. That's correct!",
+        "You chose the second option. That's correct!",
+        "You chose the third option. That's correct!",
+        "You chose the fourth option. That's correct!"
+    ],
+    "wrong_response": [
+        "You chose the first option. That's incorrect.\nThe answer was:",
+        "You chose the second option. That's incorrect.\nThe answer was:",
+        "You chose the third option. That's incorrect.\nThe answer was:",
+        "You chose the fourth option. That's incorrect.\nThe answer was:"
+    ],
+    "transition": [
+        "Next question!",
+        "Let's move on."
+    ]
+}
+
+
+
+

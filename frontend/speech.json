@@ -1,0 +1,54 @@
+{
+    "intro_mixed": [
+        "Hi, I'm Robby! I'll be your English teacher.",
+        "I will say a sentence, and you have to choose the best answer.",
+        "You can answer using the text box or by voice!",
+        "You must type or say the full answer.",
+        "If you want to anser by voice, just click the microphone button.",
+        "For future reference, you are a member of group number three.",
+        "Let's get started!",
+        "Here's the first question:"
+    ],
+    "intro_keyboard": [
+        "Hi, I'm Robby! I'll be your English teacher.",
+        "I will say a sentence, and you have to choose the best answer.",
+        "You can answer by writing the correct response in the text box below.",
+        "You must type the full answer.",
+        "For future reference, you are a member of group number two.",
+        "Let's get started!",
+        "Here's the first question:"
+    ],
+    "intro_voice": [
+        "Hi, I'm Robby! I'll be your English teacher.",
+        "I will say a sentence, and you have to choose the best answer.",
+        "You can answer by voice, just click the microphone button and speak.",
+        "You must say the full answer.",
+        "For future reference, you are a member of group number one.",
+        "Let's get started!",
+        "Here's the first question:"
+    ],
+    "correct_response": [
+        "You chose the first option.\nThat's correct!",
+        "You chose the second option.\nThat's correct!",
+        "You chose the third option.\nThat's correct!",
+        "You chose the fourth option.\nThat's correct!"
+    ],
+    "wrong_response": [
+        "You chose the first option.\nThat's incorrect. The answer was:",
+        "You chose the second option.\nThat's incorrect. The answer was:",
+        "You chose the third option.\nThat's incorrect. The answer was:",
+        "You chose the fourth option.\nThat's incorrect. The answer was:"
+    ],
+    "transition": [
+        "Next question!",
+        "Let's move on."
+    ],
+    "questionnaire": [
+        "Please copy the link in the text box below,\nand fill out the questionnaire.\nPlease be honest!",
+        "https://docs.google.com/forms/d/e/1FAIpQLSd68As_w3QsYhmNLGrFYPkSZwS94UGW4t_b6YjRMFb38HaYqg/viewform?usp=sf_link"
+    ]
+}
+
+
+
+

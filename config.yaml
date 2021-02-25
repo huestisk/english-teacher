@@ -2,4 +2,4 @@ appName: CIRproject
 logLevel: WARN
 
 Speech2Text:
-  default_mic_number: 4
+  default_mic_number: 0

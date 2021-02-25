@@ -1,16 +1,13 @@
+Kivy==2.0.0
+pyttsx3==2.90
+SpeechRecognition==3.8.1
+rapidfuzz==0.14.2
+PyYAML==5.3.1
 numpy
 pandas
 matplotlib
+espeak # Install from http://espeak.sourceforge.net/ on Windows
+pyaudio # On Windows 'pip install pipwin' then 'pipwin install pyaudio'
 
-json>= 0.0.1
-
-# For the application
-kivy
-
-# For speech generation
-pyttsx3
-libespeak1
-
-# For speech recognition
-SpeechRecognition
-pyaudio
+seaborn
+scipy

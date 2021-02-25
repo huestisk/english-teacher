@@ -1,0 +1,23 @@
+{
+    "questions": [
+    {
+        "question": "Good morning John. How are you?",
+        "answers": [
+            "I'm fine, thank you.",
+            "I'm going by train.",
+            "My name's John.",
+            "I will be there"
+        ],
+        "correctIndex": 1
+    },
+    {
+        "question": "How many resorts do you work with?",
+        "answers": [
+            "Unfortunately, we don't have the ressources now.",
+            "We work with five different sky resorts.",
+            "We have twenty people on staff at the moment.",
+            "This is our last resort."
+        ],
+        "correctIndex": 2
+    }
+]}
